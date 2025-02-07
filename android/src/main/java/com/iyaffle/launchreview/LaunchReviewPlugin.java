@@ -34,14 +34,6 @@ public class LaunchReviewPlugin implements MethodCallHandler, FlutterPlugin, Act
         return plugin;
     }
 
-    /**
-     * Plugin registration.
-     */
-    @SuppressWarnings("deprecation")
-    public static void registerWith(PluginRegistry.Registrar registrar) {
-        register(new LaunchReviewPlugin(), registrar.messenger(), registrar.activity());
-    }
-
     @Override
     public void onMethodCall(MethodCall call, Result result) {
         if (call.method.equals("launch")) {
